@@ -4,7 +4,7 @@ Which vendors and models are behind the AI-in-the-loop problem resolutions track
 [VibeMathed](https://vibemathed.com/)? A reproducible scan of its public dataset,
 broken down by AI contribution tier, verification level, and problem significance.
 
-Read the report: **`vibemathed-llm-models.html`** (self-contained; open in a browser).
+Read the report: **[winstoncheong.github.io/vibemathed-llm-analysis](https://winstoncheong.github.io/vibemathed-llm-analysis/)** (`vibemathed-llm-models.html` also works standalone).
 
 ## Reproduce
 
