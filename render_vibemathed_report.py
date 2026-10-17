@@ -139,6 +139,8 @@ both.</figcaption></figure>
 
 <table><thead><tr><th>Vendor</th><th>Problems</th><th>%</th><th>Mean sig.</th><th>Median sig.</th></tr></thead>
 <tbody>{vendor_rows}</tbody></table>
+<p class="muted">Percentages are shares of all {n} problems; they can sum above
+100% because one problem may name more than one vendor.</p>
 
 <h3 id="models">Models (mined from free-text model fields)</h3>
 
