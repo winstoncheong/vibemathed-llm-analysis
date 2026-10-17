@@ -122,13 +122,12 @@ number below. Shares are \\(s = 100 \\cdot w / n\\) with \\(n = {n}\\).</p></asi
 {cov["undisclosed_vendor"]} ({share(cov["undisclosed_vendor"])}%) name the lab or model
 behind the solve. Status is a separate axis: {cov["resolved"]} fully resolved
 ({share(cov["resolved"])}%), {res.get("candidate", 0)} candidates under review,
-{res.get("partial", 0)} partial.
-Contribution tiers: AI-discovered {ac.get("ai-discovered", 0)}, co-developed
-{ac.get("ai-co-developed", 0)}, assisted {ac.get("ai-assisted", 0)}. Status:
-{res.get("resolved", 0)} resolved, {res.get("candidate", 0)} candidates under review,
-{res.get("partial", 0)} partial. Verification is thin: {ver.get("unreviewed", 0)} unreviewed,
-{ver.get("lean-checked", 0)} Lean-checked, {ver.get("lean-verified", 0)} Lean-verified, and
-only {ver.get("expert-verified", 0)} independently expert-verified.</p>
+{res.get("partial", 0)} partial. Contribution tiers: AI-discovered
+{ac.get("ai-discovered", 0)}, co-developed {ac.get("ai-co-developed", 0)},
+assisted {ac.get("ai-assisted", 0)}. Verification is thin: {ver.get("unreviewed", 0)}
+unreviewed, {ver.get("lean-checked", 0)} Lean-checked,
+{ver.get("lean-verified", 0)} Lean-verified, and only
+{ver.get("expert-verified", 0)} independently expert-verified.</p>
 
 <figure>{bars([(v["vendor"], v["works"], i) for i, v in enumerate(vendors[:8])])}
 <figcaption>Problems per vendor, top eight. One problem naming two vendors counts for
@@ -161,8 +160,8 @@ contributes {coll.get("openai-math-2026-10", 0)} entries.</li>
 <li><strong>Volume sits at low significance.</strong> OpenAI's mean significance is
 {openai.get("sig_mean")} (median {openai.get("sig_median")}); Harmonic's is
 {next((v["sig_mean"] for v in vendors if v["vendor"] == "Harmonic"), "—")} with a median of
-10 — bulk sweeps of machine-generated conjectures scoring 5. The heaviest solved problems
-are all OpenAI candidates still under review (see table).</li>
+10 — the low end driven by bulk sweeps of machine-generated conjectures. The heaviest
+entries are predominantly OpenAI candidates still under review (see table).</li>
 <li><strong>Verification lags far behind claims.</strong> {ver.get("unreviewed", 0)} of {n}
 entries ({share(ver.get("unreviewed", 0))}%) are unreviewed by anyone independent; the top of
 the significance table is candidates, not verified resolutions.</li>
