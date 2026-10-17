@@ -105,7 +105,7 @@ def main():
 
     body = f"""<h1>VibeMathed: which AI models solve math</h1>
 
-<p class="meta"><span>dataset {esc(gen or "?")}</span><span>{n} problems</span><span>tags: math, ai-for-math</span><span>created: 2026-10-13</span></p>
+<p class="meta"><span>dataset {esc(gen or "?")}</span><span>{n} problems</span><span>tags: math, ai-for-math</span><span>created: 2026-10-13 · updated: 2026-10-17</span></p>
 
 <aside class="callout callout-note"><span class="callout-title">What this is</span>
 <p>VibeMathed (<a href="https://vibemathed.com/">vibemathed.com</a>) is a community record of
@@ -208,7 +208,8 @@ Pipeline: <code class="no-katex">scan_vibemathed.py</code>,
 <code class="no-katex">analyze_vibemathed.py</code>,
 <code class="no-katex">render_vibemathed_report.py</code>; snapshots and analysis JSON
 in <code class="no-katex">data/</code>. AI disclaimer: drafted with
-<code class="no-katex">opencode-go/muse-spark-1.3-contributor</code> (2026-10-13).</p>
+<code class="no-katex">opencode-go/muse-spark-1.3-contributor</code> (2026-10-13),
+updated with <code class="no-katex">opencode-go/beam-free</code> (2026-10-17).</p>
 """
 
     full = (HERE / "vibemathed-llm-models.html").read_text(encoding="utf-8")
