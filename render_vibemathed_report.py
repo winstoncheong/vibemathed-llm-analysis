@@ -88,7 +88,7 @@ def main():
         f"<td>{f['pct']:.1f}</td></tr>" for f in a["fields"])
     top_rows = "".join(
         f"<tr><td>{w['significance']}</td>"
-        f"<td>{esc(w['name'])[:80]}</td>"
+        f"<td><a href=\"https://vibemathed.com/problem/{esc(w['id'])}\">{esc(w['name'])[:80]}</a></td>"
         f"<td>{esc(w['resolution'])}</td><td>{esc(w['aiContribution'])}</td>"
         f"<td>{esc(w['verification'])}</td>"
         f"<td>{esc(', '.join(w['vendors']) or '—')}</td></tr>"
