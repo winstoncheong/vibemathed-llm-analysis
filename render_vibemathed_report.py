@@ -76,6 +76,10 @@ def main():
         f"<td>{m['pct']:.1f}</td></tr>"
         for m in models[:16])
     cxv = a["contrib_x_vendor"][:12]
+    anth_co = next((c["works"] for c in a["contrib_x_vendor"]
+                    if c["contrib"] == "ai-co-developed" and c["vendor"] == "Anthropic"), 0)
+    openai_co = next((c["works"] for c in a["contrib_x_vendor"]
+                      if c["contrib"] == "ai-co-developed" and c["vendor"] == "OpenAI"), 0)
     cxv_rows = "".join(
         f"<tr><td>{esc(c['contrib'])}</td><td>{esc(c['vendor'])}</td>"
         f"<td>{c['works']}</td></tr>" for c in cxv)
@@ -109,7 +113,7 @@ precisely stated open problems now proved or disproved with an AI model substant
 loop. This page scans its full public <code class="no-katex">/api/dataset</code> and counts
 which vendors and models show up, broken down by how much the AI contributed, how the result
 was checked, and how significant the problem was. Re-run the three scripts in
-the three scripts in this repo to refresh every
+this repo to refresh every
 number below. Shares are \\(s = 100 \\cdot w / n\\) with \\(n = {n}\\).</p></aside>
 
 <h2 id="coverage">1. Coverage</h2>
@@ -167,8 +171,10 @@ open-weights model at all, and only as a co-contributor:</li>
 </ul>
 <ul>{ow_items}</ul>
 <ul>
-<li><strong>Anthropic's mix is more collaborative.</strong> 66 of its 194 problems (34%) are
-AI co-developed with named human collaborators, against 148 of 1120 (13%) for OpenAI —
+<li><strong>Anthropic's mix is more collaborative.</strong> {anth_co} of its {anth.get("works", 0)} problems
+({100.0 * anth_co / max(1, anth.get("works", 1)):.0f}%) are
+AI co-developed with named human collaborators, against {openai_co} of {openai.get("works", 0)}
+({100.0 * openai_co / max(1, openai.get("works", 1)):.0f}%) for OpenAI —
 whose count is dominated by AI-discovered bulk-release entries.</li>
 </ul>
 
@@ -193,7 +199,7 @@ with regex mining of free-text model descriptions
 labels are attributed to their named lab.</li>
 <li>Significance scores are AI-estimated curator judgments (Riemann = 100), stable to a band
 of about five points — treat one-point gaps as ties.</li>
-<li>Candidates are claims, not results: 518 of the resolutions counted on the site's own
+<li>Candidates are claims, not results: {res.get("candidate", 0)} of the resolutions counted on the site's own
 stats page are still under review. This page counts problems, not truths.</li>
 </ul>
 
@@ -210,10 +216,10 @@ in <code class="no-katex">data/</code>. AI disclaimer: drafted with
     a_idx = full.index(BODY_ANCHOR) + len(BODY_ANCHOR)
     end_idx = full.index("</article>")
     out = full[:a_idx] + "\n" + body + "\n" + full[end_idx:]
-    (HERE / "vibemathed-llm-models.html").write_text(out, encoding="utf-8")
+    (HERE / "vibemathed-llm-models.html").write_text(out, encoding="utf-8", newline="\n")
     print(f"rendered body ({len(body)} chars)")
     # Sanity: every cited number must come from the analysis, not prose.
-    for token in ["1276", str(cov["resolved"]), str(openai.get("works", 0))]:
+    for token in [str(n), str(cov["resolved"]), str(openai.get("works", 0))]:
         assert token in body, token
     print("number smoke test passed")
 

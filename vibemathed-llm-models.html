@@ -1221,7 +1221,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <!-- NOTE BODY -->
 <h1>VibeMathed: which AI models solve math</h1>
 
-<p class="meta"><span>dataset 2026-10-13T19:17:00.677Z</span><span>1276 problems</span><span>tags: math, ai-for-math</span><span>created: 2026-10-13</span></p>
+<p class="meta"><span>dataset 2026-10-17T00:14:03.070Z</span><span>1284 problems</span><span>tags: math, ai-for-math</span><span>created: 2026-10-13</span></p>
 
 <aside class="callout callout-note"><span class="callout-title">What this is</span>
 <p>VibeMathed (<a href="https://vibemathed.com/">vibemathed.com</a>) is a community record of
@@ -1229,24 +1229,24 @@ precisely stated open problems now proved or disproved with an AI model substant
 loop. This page scans its full public <code class="no-katex">/api/dataset</code> and counts
 which vendors and models show up, broken down by how much the AI contributed, how the result
 was checked, and how significant the problem was. Re-run the three scripts in
-the three scripts in this repo to refresh every
-number below. Shares are \(s = 100 \cdot w / n\) with \(n = 1276\).</p></aside>
+this repo to refresh every
+number below. Shares are \(s = 100 \cdot w / n\) with \(n = 1284\).</p></aside>
 
 <h2 id="coverage">1. Coverage</h2>
 
-<p>1276 tracked problems, and vendor attribution is near-complete: all but
-30 (2.4%) name the lab or model
+<p>1284 tracked problems, and vendor attribution is near-complete: all but
+30 (2.3%) name the lab or model
 behind the solve. Status is a separate axis: 517 fully resolved
-(40.5%), 518 candidates under review,
-219 partial.
-Contribution tiers: AI-discovered 893, co-developed
-250, assisted 130. Status:
-517 resolved, 518 candidates under review,
-219 partial. Verification is thin: 706 unreviewed,
-312 Lean-checked, 159 Lean-verified, and
+(40.3%), 520 candidates under review,
+225 partial.
+Contribution tiers: AI-discovered 894, co-developed
+251, assisted 136. Status:
+517 resolved, 520 candidates under review,
+225 partial. Verification is thin: 708 unreviewed,
+318 Lean-checked, 159 Lean-verified, and
 only 14 independently expert-verified.</p>
 
-<figure><svg viewBox="0 0 676 224" role="img" aria-label="Bar chart"><text x="0" y="25" font-size="13">OpenAI</text><rect x="190" y="10" width="430" height="18" style="fill:#0969da"/><text x="624" y="25" font-size="13" class="muted">1120</text><text x="0" y="51" font-size="13">Anthropic</text><rect x="190" y="36" width="74" height="18" style="fill:#6e40c9"/><text x="268" y="51" font-size="13" class="muted">194</text><text x="0" y="77" font-size="13">Google DeepMind</text><rect x="190" y="62" width="22" height="18" style="fill:#1a7f37"/><text x="216" y="77" font-size="13" class="muted">56</text><text x="0" y="103" font-size="13">Harmonic</text><rect x="190" y="88" width="21" height="18" style="fill:#9a6700"/><text x="215" y="103" font-size="13" class="muted">55</text><text x="0" y="129" font-size="13">Frenzy Math</text><rect x="190" y="114" width="8" height="18" style="fill:#bc4c00"/><text x="202" y="129" font-size="13" class="muted">22</text><text x="0" y="155" font-size="13">Axiom Math</text><rect x="190" y="140" width="4" height="18" style="fill:#0e7490"/><text x="198" y="155" font-size="13" class="muted">11</text><text x="0" y="181" font-size="13">xAI</text><rect x="190" y="166" width="2" height="18" style="fill:#59636e"/><text x="196" y="181" font-size="13" class="muted">6</text><text x="0" y="207" font-size="13">Open-weights</text><rect x="190" y="192" width="2" height="18" style="fill:#d29922"/><text x="196" y="207" font-size="13" class="muted">6</text></svg>
+<figure><svg viewBox="0 0 676 224" role="img" aria-label="Bar chart"><text x="0" y="25" font-size="13">OpenAI</text><rect x="190" y="10" width="430" height="18" style="fill:#0969da"/><text x="624" y="25" font-size="13" class="muted">1127</text><text x="0" y="51" font-size="13">Anthropic</text><rect x="190" y="36" width="74" height="18" style="fill:#6e40c9"/><text x="268" y="51" font-size="13" class="muted">195</text><text x="0" y="77" font-size="13">Harmonic</text><rect x="190" y="62" width="22" height="18" style="fill:#1a7f37"/><text x="216" y="77" font-size="13" class="muted">57</text><text x="0" y="103" font-size="13">Google DeepMind</text><rect x="190" y="88" width="21" height="18" style="fill:#9a6700"/><text x="215" y="103" font-size="13" class="muted">56</text><text x="0" y="129" font-size="13">Frenzy Math</text><rect x="190" y="114" width="8" height="18" style="fill:#bc4c00"/><text x="202" y="129" font-size="13" class="muted">22</text><text x="0" y="155" font-size="13">Axiom Math</text><rect x="190" y="140" width="4" height="18" style="fill:#0e7490"/><text x="198" y="155" font-size="13" class="muted">11</text><text x="0" y="181" font-size="13">Open-weights</text><rect x="190" y="166" width="2" height="18" style="fill:#59636e"/><text x="196" y="181" font-size="13" class="muted">6</text><text x="0" y="207" font-size="13">xAI</text><rect x="190" y="192" width="2" height="18" style="fill:#d29922"/><text x="196" y="207" font-size="13" class="muted">6</text></svg>
 <figcaption>Problems per vendor, top eight. One problem naming two vendors counts for
 both.</figcaption></figure>
 
@@ -1255,52 +1255,54 @@ both.</figcaption></figure>
 <h3 id="vendors">Vendors (problems, %, mean / median significance)</h3>
 
 <table><thead><tr><th>Vendor</th><th>Problems</th><th>%</th><th>Mean sig.</th><th>Median sig.</th></tr></thead>
-<tbody><tr><td>OpenAI</td><td>1120</td><td>87.8</td><td>27.7</td><td>25</td></tr><tr><td>Anthropic</td><td>194</td><td>15.2</td><td>20.3</td><td>15</td></tr><tr><td>Google DeepMind</td><td>56</td><td>4.4</td><td>14.6</td><td>10</td></tr><tr><td>Harmonic</td><td>55</td><td>4.3</td><td>13.6</td><td>10</td></tr><tr><td>Frenzy Math</td><td>22</td><td>1.7</td><td>17.6</td><td>15.0</td></tr><tr><td>Axiom Math</td><td>11</td><td>0.9</td><td>17.6</td><td>15</td></tr><tr><td>xAI</td><td>6</td><td>0.5</td><td>15.7</td><td>14.5</td></tr><tr><td>Open-weights</td><td>6</td><td>0.5</td><td>27.7</td><td>17.5</td></tr><tr><td>Zhipu</td><td>5</td><td>0.4</td><td>30.2</td><td>20</td></tr><tr><td>Other: Rethlas</td><td>2</td><td>0.2</td><td>18.5</td><td>18.5</td></tr><tr><td>Other: Moonshot AI</td><td>1</td><td>0.1</td><td>20</td><td>20</td></tr><tr><td>Other: Tencent Hunyuan</td><td>1</td><td>0.1</td><td>20</td><td>20</td></tr></tbody></table>
+<tbody><tr><td>OpenAI</td><td>1127</td><td>87.8</td><td>27.7</td><td>25.0</td></tr><tr><td>Anthropic</td><td>195</td><td>15.2</td><td>20.3</td><td>15.0</td></tr><tr><td>Harmonic</td><td>57</td><td>4.4</td><td>14.6</td><td>10</td></tr><tr><td>Google DeepMind</td><td>56</td><td>4.4</td><td>14.6</td><td>10</td></tr><tr><td>Frenzy Math</td><td>22</td><td>1.7</td><td>17.6</td><td>15.0</td></tr><tr><td>Axiom Math</td><td>11</td><td>0.9</td><td>17.6</td><td>15</td></tr><tr><td>Open-weights</td><td>6</td><td>0.5</td><td>27.7</td><td>17.5</td></tr><tr><td>xAI</td><td>6</td><td>0.5</td><td>15.7</td><td>14.5</td></tr><tr><td>Zhipu</td><td>5</td><td>0.4</td><td>30.2</td><td>20</td></tr><tr><td>Other: Rethlas</td><td>2</td><td>0.2</td><td>18.5</td><td>18.5</td></tr><tr><td>Other: Shanghai AI Lab</td><td>1</td><td>0.1</td><td>24</td><td>24</td></tr><tr><td>Other: Tencent Hunyuan</td><td>1</td><td>0.1</td><td>20</td><td>20</td></tr><tr><td>Other: Moonshot AI</td><td>1</td><td>0.1</td><td>20</td><td>20</td></tr></tbody></table>
 
 <h3 id="models">Models (mined from free-text model fields)</h3>
 
 <table><thead><tr><th>Model</th><th>Problems</th><th>%</th></tr></thead>
-<tbody><tr><td>OpenAI ChatGPT</td><td>1083</td><td>84.9</td></tr><tr><td>Anthropic Claude Opus</td><td>127</td><td>10.0</td></tr><tr><td>OpenAI Codex</td><td>113</td><td>8.9</td></tr><tr><td>Anthropic Claude Fable</td><td>93</td><td>7.3</td></tr><tr><td>Harmonic</td><td>55</td><td>4.3</td></tr><tr><td>Google</td><td>41</td><td>3.2</td></tr><tr><td>Frenzy Math</td><td>22</td><td>1.7</td></tr><tr><td>Anthropic Claude Code</td><td>13</td><td>1.0</td></tr><tr><td>AxiomMath</td><td>11</td><td>0.9</td></tr><tr><td>Anthropic Claude Sonnet</td><td>8</td><td>0.6</td></tr><tr><td>Open-weights</td><td>6</td><td>0.5</td></tr><tr><td>xAI</td><td>6</td><td>0.5</td></tr><tr><td>Zhipu</td><td>5</td><td>0.4</td></tr></tbody></table>
+<tbody><tr><td>OpenAI ChatGPT</td><td>1089</td><td>84.8</td></tr><tr><td>Anthropic Claude Opus</td><td>128</td><td>10.0</td></tr><tr><td>OpenAI Codex</td><td>117</td><td>9.1</td></tr><tr><td>Anthropic Claude Fable</td><td>93</td><td>7.2</td></tr><tr><td>Harmonic</td><td>57</td><td>4.4</td></tr><tr><td>Google</td><td>41</td><td>3.2</td></tr><tr><td>Frenzy Math</td><td>22</td><td>1.7</td></tr><tr><td>Anthropic Claude Code</td><td>13</td><td>1.0</td></tr><tr><td>AxiomMath</td><td>11</td><td>0.9</td></tr><tr><td>Anthropic Claude Sonnet</td><td>8</td><td>0.6</td></tr><tr><td>xAI</td><td>6</td><td>0.5</td></tr><tr><td>Open-weights</td><td>6</td><td>0.5</td></tr><tr><td>Zhipu</td><td>5</td><td>0.4</td></tr></tbody></table>
 
 <h3 id="tiers">Contribution tier by vendor</h3>
 
 <table><thead><tr><th>Tier</th><th>Vendor</th><th>Problems</th></tr></thead>
-<tbody><tr><td>ai-discovered</td><td>OpenAI</td><td>693</td></tr><tr><td>ai-co-developed</td><td>OpenAI</td><td>148</td></tr><tr><td>ai-discovered</td><td>Anthropic</td><td>99</td></tr><tr><td>ai-assisted</td><td>OpenAI</td><td>86</td></tr><tr><td>ai-co-developed</td><td>Anthropic</td><td>66</td></tr><tr><td>ai-assisted</td><td>Anthropic</td><td>29</td></tr><tr><td>ai-discovered</td><td>Harmonic</td><td>27</td></tr><tr><td>ai-discovered</td><td>Undisclosed</td><td>24</td></tr><tr><td>ai-discovered</td><td>Google DeepMind</td><td>24</td></tr><tr><td>ai-co-developed</td><td>Google DeepMind</td><td>21</td></tr><tr><td>ai-discovered</td><td>Frenzy Math</td><td>15</td></tr><tr><td>ai-discovered</td><td>Axiom Math</td><td>7</td></tr></tbody></table>
+<tbody><tr><td>ai-discovered</td><td>OpenAI</td><td>694</td></tr><tr><td>ai-co-developed</td><td>OpenAI</td><td>149</td></tr><tr><td>ai-discovered</td><td>Anthropic</td><td>99</td></tr><tr><td>ai-assisted</td><td>OpenAI</td><td>88</td></tr><tr><td>ai-co-developed</td><td>Anthropic</td><td>66</td></tr><tr><td>ai-assisted</td><td>Anthropic</td><td>30</td></tr><tr><td>ai-discovered</td><td>Harmonic</td><td>27</td></tr><tr><td>ai-discovered</td><td>Undisclosed</td><td>24</td></tr><tr><td>ai-discovered</td><td>Google DeepMind</td><td>24</td></tr><tr><td>ai-co-developed</td><td>Google DeepMind</td><td>21</td></tr><tr><td>ai-discovered</td><td>Frenzy Math</td><td>15</td></tr><tr><td>ai-discovered</td><td>Axiom Math</td><td>7</td></tr></tbody></table>
 
 <h2 id="significance">3. Significance</h2>
 
 <ul>
-<li><strong>OpenAI dominates volume.</strong> 1120 of 1276 problems
+<li><strong>OpenAI dominates volume.</strong> 1127 of 1284 problems
 (87.8%) involve OpenAI; Anthropic is next at
-194 (15.2%). The October 2026 bulk release alone
+195 (15.2%). The October 2026 bulk release alone
 contributes 497 entries.</li>
 <li><strong>Volume sits at low significance.</strong> OpenAI's mean significance is
-27.7 (median 25); Harmonic's is
-13.6 with a median of
+27.7 (median 25.0); Harmonic's is
+14.6 with a median of
 10 — bulk sweeps of machine-generated conjectures scoring 5. The heaviest solved problems
 are all OpenAI candidates still under review (see table).</li>
-<li><strong>Verification lags far behind claims.</strong> 706 of 1276
-entries (55.3%) are unreviewed by anyone independent; the top of
+<li><strong>Verification lags far behind claims.</strong> 708 of 1284
+entries (55.1%) are unreviewed by anyone independent; the top of
 the significance table is candidates, not verified resolutions.</li>
-<li><strong>Open weights are nearly absent.</strong> 6 of 1276 problems involve an
+<li><strong>Open weights are nearly absent.</strong> 6 of 1284 problems involve an
 open-weights model at all, and only as a co-contributor:</li>
 </ul>
 <ul><li><a href="https://vibemathed.com/problem/colombo-s-difference-power-determinant-conjecture">colombo-s-difference-power-determinant-conjecture</a></li><li><a href="https://vibemathed.com/problem/critical-site-percolation-z-d">critical-site-percolation-z-d</a></li><li><a href="https://vibemathed.com/problem/dean-s-conjecture-for-k-5">dean-s-conjecture-for-k-5</a></li><li><a href="https://vibemathed.com/problem/equivalence-of-generic-stability-notions-for-keisler-measures">equivalence-of-generic-stability-notions-for-keisler-measures</a></li><li><a href="https://vibemathed.com/problem/quartic-hessian-conjecture-dimension-four">quartic-hessian-conjecture-dimension-four</a></li><li><a href="https://vibemathed.com/problem/ziegler-cross-polytope-01">ziegler-cross-polytope-01</a></li></ul>
 <ul>
-<li><strong>Anthropic's mix is more collaborative.</strong> 66 of its 194 problems (34%) are
-AI co-developed with named human collaborators, against 148 of 1120 (13%) for OpenAI —
+<li><strong>Anthropic's mix is more collaborative.</strong> 66 of its 195 problems
+(34%) are
+AI co-developed with named human collaborators, against 149 of 1127
+(13%) for OpenAI —
 whose count is dominated by AI-discovered bulk-release entries.</li>
 </ul>
 
 <h3 id="top">Highest-significance entries</h3>
 
 <table><thead><tr><th>Sig.</th><th>Problem</th><th>Status</th><th>AI role</th><th>Checked</th><th>Vendors</th></tr></thead>
-<tbody><tr><td>87</td><td>Navier–Stokes (Clay C/D)</td><td>candidate</td><td>ai-discovered</td><td>lean-verified</td><td>OpenAI</td></tr><tr><td>85</td><td>Quasi-Riemann hypothesis</td><td>candidate</td><td>ai-discovered</td><td>lean-checked</td><td>OpenAI</td></tr><tr><td>85</td><td>Existential Hilbert 16th problem</td><td>candidate</td><td>ai-discovered</td><td>unreviewed</td><td>OpenAI</td></tr><tr><td>80</td><td>Euler blowup, unforced</td><td>candidate</td><td>ai-discovered</td><td>lean-verified</td><td>OpenAI</td></tr><tr><td>79</td><td>Benjamini-Schramm criticality (bond form)</td><td>partial</td><td>ai-discovered</td><td>lean-checked</td><td>OpenAI</td></tr><tr><td>78</td><td>BSD formula in Selmer corank at most one</td><td>partial</td><td>ai-discovered</td><td>unreviewed</td><td>OpenAI</td></tr><tr><td>78</td><td>Critical percolation: θ(p_c) = 0</td><td>candidate</td><td>ai-discovered</td><td>lean-verified</td><td>Anthropic</td></tr><tr><td>75</td><td>Log abundance conjecture</td><td>candidate</td><td>ai-discovered</td><td>contested</td><td>OpenAI</td></tr><tr><td>74</td><td>Unique Games Conjecture</td><td>candidate</td><td>ai-discovered</td><td>lean-checked</td><td>OpenAI</td></tr><tr><td>72</td><td>Landau-Siegel zeros</td><td>candidate</td><td>ai-discovered</td><td>lean-checked</td><td>OpenAI</td></tr><tr><td>72</td><td>Hodge conjecture for CM abelian varieties</td><td>partial</td><td>ai-discovered</td><td>unreviewed</td><td>OpenAI</td></tr><tr><td>72</td><td>Critical site percolation: θ(p_c) = 0</td><td>candidate</td><td>ai-discovered</td><td>lean-checked</td><td>Anthropic, Open-weights, OpenAI, Zhipu</td></tr><tr><td>70</td><td>Hilbert&#x27;s tenth problem over Q</td><td>candidate</td><td>ai-discovered</td><td>unreviewed</td><td>OpenAI</td></tr><tr><td>70</td><td>Hadwiger&#x27;s conjecture</td><td>candidate</td><td>ai-discovered</td><td>lean-checked</td><td>OpenAI</td></tr><tr><td>70</td><td>Euler blowup, smooth force</td><td>resolved</td><td>ai-co-developed</td><td>lean-verified</td><td>Anthropic, OpenAI</td></tr><tr><td>68</td><td>Minimal model existence for lc pairs</td><td>candidate</td><td>ai-discovered</td><td>unreviewed</td><td>OpenAI</td></tr><tr><td>68</td><td>Free group factor isomorphism problem</td><td>candidate</td><td>ai-discovered</td><td>lean-checked</td><td>OpenAI</td></tr><tr><td>68</td><td>Zeta zeros on the line</td><td>partial</td><td>ai-discovered</td><td>lean-checked</td><td>Anthropic</td></tr><tr><td>66</td><td>Benjamini-Schramm pc &lt; pu conjecture</td><td>candidate</td><td>ai-discovered</td><td>lean-checked</td><td>OpenAI</td></tr><tr><td>66</td><td>Residual finiteness of hyperbolic groups</td><td>candidate</td><td>ai-discovered</td><td>lean-checked</td><td>OpenAI</td></tr><tr><td>65</td><td>L = RL = BPL</td><td>candidate</td><td>ai-discovered</td><td>lean-checked</td><td>OpenAI</td></tr><tr><td>65</td><td>Anderson extended states, d &gt;= 3 (Simon&#x27;s Problem 1)</td><td>candidate</td><td>ai-discovered</td><td>unreviewed</td><td>OpenAI</td></tr><tr><td>65</td><td>Erdős Problem #3</td><td>candidate</td><td>ai-discovered</td><td>lean-checked</td><td>OpenAI</td></tr><tr><td>65</td><td>Hilbert-Smith conjecture</td><td>candidate</td><td>ai-discovered</td><td>unreviewed</td><td>OpenAI</td></tr><tr><td>65</td><td>A Complex Structure on S^6</td><td>candidate</td><td>ai-co-developed</td><td>unreviewed</td><td>Anthropic</td></tr></tbody></table>
+<tbody><tr><td>87</td><td>Navier–Stokes (Clay C/D)</td><td>candidate</td><td>ai-discovered</td><td>lean-verified</td><td>OpenAI</td></tr><tr><td>85</td><td>Quasi-Riemann hypothesis</td><td>candidate</td><td>ai-discovered</td><td>lean-checked</td><td>OpenAI</td></tr><tr><td>85</td><td>Existential Hilbert 16th problem</td><td>candidate</td><td>ai-discovered</td><td>unreviewed</td><td>OpenAI</td></tr><tr><td>80</td><td>Euler blowup, unforced</td><td>candidate</td><td>ai-discovered</td><td>lean-verified</td><td>OpenAI</td></tr><tr><td>79</td><td>Benjamini-Schramm criticality (bond form)</td><td>partial</td><td>ai-discovered</td><td>lean-checked</td><td>OpenAI</td></tr><tr><td>78</td><td>BSD formula in Selmer corank at most one</td><td>partial</td><td>ai-discovered</td><td>unreviewed</td><td>OpenAI</td></tr><tr><td>78</td><td>Critical percolation: θ(p_c) = 0</td><td>candidate</td><td>ai-discovered</td><td>lean-verified</td><td>Anthropic</td></tr><tr><td>75</td><td>Log abundance conjecture</td><td>candidate</td><td>ai-discovered</td><td>contested</td><td>OpenAI</td></tr><tr><td>74</td><td>Unique Games Conjecture</td><td>candidate</td><td>ai-discovered</td><td>lean-checked</td><td>OpenAI</td></tr><tr><td>72</td><td>Landau-Siegel zeros</td><td>candidate</td><td>ai-discovered</td><td>lean-checked</td><td>OpenAI</td></tr><tr><td>72</td><td>Hodge conjecture for CM abelian varieties</td><td>partial</td><td>ai-discovered</td><td>unreviewed</td><td>OpenAI</td></tr><tr><td>72</td><td>Critical site percolation: θ(p_c) = 0</td><td>candidate</td><td>ai-discovered</td><td>lean-checked</td><td>Anthropic, Open-weights, OpenAI, Zhipu</td></tr><tr><td>70</td><td>Hilbert&#x27;s tenth problem over Q</td><td>candidate</td><td>ai-discovered</td><td>unreviewed</td><td>OpenAI</td></tr><tr><td>70</td><td>Hadwiger&#x27;s conjecture</td><td>candidate</td><td>ai-discovered</td><td>lean-checked</td><td>OpenAI</td></tr><tr><td>70</td><td>Euler blowup, smooth force</td><td>resolved</td><td>ai-co-developed</td><td>lean-verified</td><td>Anthropic, OpenAI</td></tr><tr><td>68</td><td>Minimal model existence for lc pairs</td><td>candidate</td><td>ai-discovered</td><td>unreviewed</td><td>OpenAI</td></tr><tr><td>68</td><td>Free group factor isomorphism problem</td><td>candidate</td><td>ai-discovered</td><td>lean-checked</td><td>OpenAI</td></tr><tr><td>68</td><td>Zeta zeros on the line</td><td>partial</td><td>ai-discovered</td><td>lean-checked</td><td>Anthropic</td></tr><tr><td>66</td><td>Benjamini-Schramm pc &lt; pu conjecture</td><td>candidate</td><td>ai-discovered</td><td>lean-checked</td><td>OpenAI</td></tr><tr><td>66</td><td>Residual finiteness of hyperbolic groups</td><td>candidate</td><td>ai-discovered</td><td>lean-checked</td><td>OpenAI</td></tr><tr><td>65</td><td>Anderson extended states, d &gt;= 3 (Simon&#x27;s Problem 1)</td><td>candidate</td><td>ai-discovered</td><td>unreviewed</td><td>OpenAI</td></tr><tr><td>65</td><td>L = RL = BPL</td><td>candidate</td><td>ai-discovered</td><td>lean-checked</td><td>OpenAI</td></tr><tr><td>65</td><td>Erdős Problem #3</td><td>candidate</td><td>ai-discovered</td><td>lean-checked</td><td>OpenAI</td></tr><tr><td>65</td><td>Hilbert-Smith conjecture</td><td>candidate</td><td>ai-discovered</td><td>unreviewed</td><td>OpenAI</td></tr><tr><td>65</td><td>A Complex Structure on S^6</td><td>candidate</td><td>ai-co-developed</td><td>unreviewed</td><td>Anthropic</td></tr></tbody></table>
 
 <h3 id="fields">Areas</h3>
 
 <table><thead><tr><th>Area</th><th>Problems</th><th>%</th></tr></thead>
-<tbody><tr><td>Combinatorics</td><td>275</td><td>21.6</td></tr><tr><td>Geometry &amp; topology</td><td>194</td><td>15.2</td></tr><tr><td>Number theory</td><td>193</td><td>15.1</td></tr><tr><td>Analysis</td><td>154</td><td>12.1</td></tr><tr><td>Algebra</td><td>126</td><td>9.9</td></tr><tr><td>Theoretical computer science</td><td>82</td><td>6.4</td></tr><tr><td>Probability &amp; statistics</td><td>79</td><td>6.2</td></tr><tr><td>Mathematical physics</td><td>50</td><td>3.9</td></tr><tr><td>Algorithms &amp; optimization</td><td>38</td><td>3.0</td></tr><tr><td>Quantum information &amp; computing</td><td>35</td><td>2.7</td></tr><tr><td>Differential equations</td><td>33</td><td>2.6</td></tr><tr><td>Logic &amp; foundations</td><td>17</td><td>1.3</td></tr></tbody></table>
+<tbody><tr><td>Combinatorics</td><td>276</td><td>21.5</td></tr><tr><td>Geometry &amp; topology</td><td>196</td><td>15.3</td></tr><tr><td>Number theory</td><td>195</td><td>15.2</td></tr><tr><td>Analysis</td><td>156</td><td>12.1</td></tr><tr><td>Algebra</td><td>126</td><td>9.8</td></tr><tr><td>Theoretical computer science</td><td>83</td><td>6.5</td></tr><tr><td>Probability &amp; statistics</td><td>79</td><td>6.2</td></tr><tr><td>Mathematical physics</td><td>50</td><td>3.9</td></tr><tr><td>Algorithms &amp; optimization</td><td>38</td><td>3.0</td></tr><tr><td>Quantum information &amp; computing</td><td>35</td><td>2.7</td></tr><tr><td>Differential equations</td><td>33</td><td>2.6</td></tr><tr><td>Logic &amp; foundations</td><td>17</td><td>1.3</td></tr></tbody></table>
 
 <h2 id="caveats">4. Caveats</h2>
 
@@ -1313,12 +1315,12 @@ with regex mining of free-text model descriptions
 labels are attributed to their named lab.</li>
 <li>Significance scores are AI-estimated curator judgments (Riemann = 100), stable to a band
 of about five points — treat one-point gaps as ties.</li>
-<li>Candidates are claims, not results: 518 of the resolutions counted on the site's own
+<li>Candidates are claims, not results: 520 of the resolutions counted on the site's own
 stats page are still under review. This page counts problems, not truths.</li>
 </ul>
 
-<p class="footnote">Dataset generated 2026-10-13T19:17:00.677Z, fetched 2026-10-13T19:18:48+00:00 from
-<code class="no-katex">https://vibemathed.com/api/dataset</code> (1276 problems).
+<p class="footnote">Dataset generated 2026-10-17T00:14:03.070Z, fetched 2026-10-17T00:16:18+00:00 from
+<code class="no-katex">https://vibemathed.com/api/dataset</code> (1284 problems).
 Pipeline: <code class="no-katex">scan_vibemathed.py</code>,
 <code class="no-katex">analyze_vibemathed.py</code>,
 <code class="no-katex">render_vibemathed_report.py</code>; snapshots and analysis JSON

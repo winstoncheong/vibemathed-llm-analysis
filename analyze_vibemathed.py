@@ -260,7 +260,7 @@ def main():
         "per_prob": per_prob,
     }
     out = HERE / args.out
-    out.write_text(json.dumps(analysis, indent=1, ensure_ascii=False), encoding="utf-8")
+    out.write_text(json.dumps(analysis, indent=1, ensure_ascii=False), encoding="utf-8", newline="\n")
     print(f"problems={n} resolved={resolved} vendors={len(vendor_list)}")
     print(f"wrote {out}")
 

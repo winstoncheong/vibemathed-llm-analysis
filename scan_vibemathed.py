@@ -41,8 +41,8 @@ def main():
     day = stamp.strftime("%Y%m%d")
     dated = outdir / f"vibemathed_{day}.json"
     latest = outdir / "vibemathed_latest.json"
-    dated.write_text(json.dumps(snapshot, indent=1, ensure_ascii=False), encoding="utf-8")
-    latest.write_text(json.dumps(snapshot, indent=1, ensure_ascii=False), encoding="utf-8")
+    dated.write_text(json.dumps(snapshot, indent=1, ensure_ascii=False), encoding="utf-8", newline="\n")
+    latest.write_text(json.dumps(snapshot, indent=1, ensure_ascii=False), encoding="utf-8", newline="\n")
     print(f"wrote {dated} ({snapshot['n_problems']} problems)")
     print(f"wrote {latest}")
 
